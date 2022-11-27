@@ -25,17 +25,13 @@ class LabExample extends JFrame {
         add(button2, BorderLayout.SOUTH);
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
+                milan++;
+                labe1.setText("        Result " + milan + " X " + real + "         ");
+                last = "AC Milan";
+                labe2.setText("            Last Scorer: " + last + "              ");
 
-                try {
 
 
-                    milan++;
-                    labe1.setText("        Result " + milan + " X " + real + "         ");
-                    last = "AC Milan";
-                    labe2.setText("            Last Scorer: " + last + "              ");
-                } catch (Exception e) {
-
-                }
                 if (milan > real) {
                     labe3.setText("                          Winner " + "Milan" + "                            ");
                 } else if (milan < real) {

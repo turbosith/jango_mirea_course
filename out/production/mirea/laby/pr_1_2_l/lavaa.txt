@@ -1,0 +1,138 @@
+package ru.mirea.laba1;
+
+
+public class Book {
+    private String name;
+    private String author;
+    private String category;
+    private int number_of_pages;
+    public Book(String n, String a){
+        name = n;
+        author= a;
+        category="Default";
+        number_of_pages=0;
+    }
+    public Book( String cat, int n){
+        category=cat;
+        number_of_pages=n;
+        name = "Default";
+        author=  "Default";
+    }
+    public Book(){
+        name =  "Default";
+        author=  "Default";
+        name =  "Default";
+        author=  "Default";
+    }
+    public void setNumberOfPages(int n) {
+        this.number_of_pages = n;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setAuthor(String a) {
+        this.author = a;
+    }
+    public String getName(String name){
+        return name;
+    }
+    public int getNumberOfPages() {
+        return number_of_pages;
+    }
+    public String toString(){
+        return this.name+", author "+this.author+", number of pages "+this.number_of_pages+", category "+this.category;
+    }
+    public void HowMuchIsRead(){
+        System.out.println(" You will read "+name+" "+number_of_pages*2.5+" minutes");
+    }
+
+}
+
+
+
+
+
+
+
+package ru.mirea.laba1;
+
+public class TestBook {
+    public static void main(String[] args) {
+        Book b1 = new Book("Roman", 150);
+        Book b2 = new Book("Martin Iden", "Jack London");
+        Book b3 = new Book();
+        b3.setNumberOfPages(256);
+        b1.setName("1984");
+        b1.setAuthor("Djorj Oruel");
+        System.out.println(b3.getNumberOfPages());
+        System.out.println(b1);
+        System.out.println(b2);
+        System.out.println(b3);
+        b1.HowMuchIsRead();
+        b2.HowMuchIsRead();
+        b3.HowMuchIsRead();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Author {
+    private String name;
+    private String email;
+    private char gender;
+    public Author(String n, String e, char g){
+        this.name=n;
+        this.email=e;
+        this.gender=g;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getEmail(){
+        return this.email;
+    }
+    public char getGender(){
+        return this.gender;
+    }
+    public void setEmail(String e){
+        this.email=e;
+    }
+    public String toString(){
+        return this.name+", email "+this.email+", gender "+this.gender;
+    }
+
+
+
+
+
+
+}
+
+
+public class TestAuthor {
+    public static void main(String[] args) {
+        Author a1 = new Author("Stiven King", "king.s@mail.ru", 'm');
+        Author a2 = new Author("Ain Rand", "rand.rand.123@gmail.com", 'w');
+        System.out.println(a1);
+        System.out.println(a2);
+        a1.setEmail("king.gmail.com");
+        System.out.println(a1.getEmail());
+        System.out.println(a2.getName()+" "+ a2.getGender());
+
+
+    }
+
+}
+

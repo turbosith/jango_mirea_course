@@ -1,4 +1,4 @@
-package pr5;
+package pr5.prime;
 
 public class IsPrime {
     static boolean isPrime(int number) {

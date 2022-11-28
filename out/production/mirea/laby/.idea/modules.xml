@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/l2/l2.iml" filepath="$PROJECT_DIR$/l2/l2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/l4/l4.iml" filepath="$PROJECT_DIR$/l4/l4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mirea.iml" filepath="$PROJECT_DIR$/mirea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr1/pr1.iml" filepath="$PROJECT_DIR$/pr1/pr1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr2.iml" filepath="$PROJECT_DIR$/pr2/pr2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr5/pr5.iml" filepath="$PROJECT_DIR$/pr5/pr5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr6/pr6.iml" filepath="$PROJECT_DIR$/pr6/pr6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr_3/pr_3.iml" filepath="$PROJECT_DIR$/pr_3/pr_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr_4/pr_4.iml" filepath="$PROJECT_DIR$/pr_4/pr_4.iml" />
+    </modules>
+  </component>
+</project>

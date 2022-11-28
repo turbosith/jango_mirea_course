@@ -1,8 +1,7 @@
-package pr5;
+package pr5.prime;
 import java.util.Scanner;
-import pr5.IsPrime;
 
-import static pr5.IsPrime.isPrime;
+import static pr5.prime.IsPrime.isPrime;
 
 public class TestIsPrime {
     public static void main(String[] args) {

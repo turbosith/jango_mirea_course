@@ -1,4 +1,4 @@
-package practiki.prac_11_12;
+package laby.prac_11_12;
 
 public class TestAddress {
     public static void main(String[] args) {

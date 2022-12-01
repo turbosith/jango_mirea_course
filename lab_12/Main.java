@@ -21,36 +21,26 @@ dd/mm/yyyy. Начиная с 1900 года до 9999 года.
 – пример правильных выражений: 29/02/2000, 30/04/2003, 01/01/2003.
 – пример неправильных выражений: 29/02/2001, 30-04-2003, 1/1/1899.
  */
+import java.util.Scanner;
+import java.util.regex.*;
 public class Main {
-    public static void main(String[] args) {
-        // 1
-        // java5tiger 77 java6mustang
-        Scanner in = new Scanner(System.in);
-        Pattern p1 = Pattern.compile("\\d+\\s?");
-        String[] words = p1.split(in.nextLine());
-        for (String word : words) {
-            System.out.println(word);
-        }
+    private static final Pattern DATE_PATTERN = Pattern.compile(
 
-        //2
-        Pattern p2 = Pattern.compile("^abcdefghijklmnopqrstuv18340$");
-        String str = "abcdefghijklmnopqrstuv18340";
-        Matcher matcher = p2.matcher(str);
-        System.out.println(matcher.matches());
+            "^(0[1-9]|[12]\\d|3[01])/([0][1-9]|1[0-2])/((?:1[9]|[2-9]\\d)\\d{2})$"
+    );
 
-        //3
-        /*
-        – пример правильных выражений: 29/02/2000, 30/04/2003, 01/01/2003.
-        – пример неправильных выражений: 29/02/2001, 30-04-2003, 1/1/1899.
-         */
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String s = "29/02/2000";
-        try {
-            LocalDate date = LocalDate.parse(s, formatter);
-            if(s.matches(formatter.format(date))) System.out.println(formatter.format(date));
-            else System.out.println("Год не високосный! неправильное выражение");
-        }catch(java.time.format.DateTimeParseException e){
-            System.out.println("неправильное выражение");
-        }
+    public static void main(String... args) {
+        System.out.println(checkString("29/02/1700"));
+        System.out.println(checkString("30/04/2003"));
+        System.out.println(checkString("01/01/2003"));
+        System.out.println(checkString("29/02/2001"));
+        System.out.println(checkString("30-04-2003"));
+        System.out.println(checkString("1/1/1899"));
+    }
+
+    private static boolean checkString(final String dateAsString) {
+        Matcher m = DATE_PATTERN.matcher(dateAsString);
+        boolean result = m.matches();
+        return result;
     }
 }

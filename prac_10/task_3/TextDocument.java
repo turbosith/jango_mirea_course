@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class TextDocument extends JFrame implements IDocument  {
     String filename;
-    final JLabel label = new JLabel("234324");
+    final JLabel label = new JLabel("444");
     JTextField txt = new JTextField("filename.txt");
 
     @Override

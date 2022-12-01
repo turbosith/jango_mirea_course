@@ -1,9 +1,9 @@
-package practiki.prac_11_12;
+package laby.prac_11_12;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-//СДАНО
+
 
 /*
 Задание 1. (10%)
@@ -25,9 +25,6 @@ shirts[4] = "S005,Tan Polo Shirt,Tan,XL"; shirts[5] = "S006,Black T-Shirt,Black,
 "S010,Orange T-Shirt,Orange,S"; shirts[10] = "S011,Maroon Polo Shirt,Maroon,S";
 Преобразуйте строковый массив в массив класса Shirt и выведите его на консоль.
 Задание 4. (30%)
- */
-
-/*
 В методе main считай с консоли имя файла, который содержит слова, разделенные пробелом. В
 методе getLine() используя StringBuilder расставьте все слова в таком порядке, чтобы последняя буква
 данного слова совпадала с первой буквой следующего не учитывая регистр. Каждое слово должно
@@ -38,7 +35,7 @@ public class Main {
     public static void main(String[] args) {
 
         String line = "";
-        try(FileReader reader = new FileReader("src/practiki/prac_11_12/sourse/inp.txt")){
+        try(FileReader reader = new FileReader("inp.txt")){
             int c;
             while((c=reader.read())!=-1){
                 line += (char)c;

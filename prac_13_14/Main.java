@@ -1,5 +1,5 @@
 package laby.prac_13_14;
-// СДАНО
+
 import java.text.SimpleDateFormat;
 import java.util.*;
 /*
@@ -13,24 +13,15 @@ java.util.* (Объявление Dated=newDate() или метод System.curre
 Доработайте класс Student предусмотрите поле для хранения даты рождения, перепишите метод
 toString() таким образом, чтобы он разработайте метод, возвращал строковое представление даты рождения
 по вводимому в метод формату даты (например, короткий, средний и полный формат даты).
-Задание 4. (10%)
-Напишите пользовательский код, который формирует объекты Date и Calendar по следующим
-данным, вводимым пользователем:
-<Год><Месяц><Число>
-<Часы1><минуты>
-Задание 5 (30%)
-Сравнить время выполнения кода в реализации кода в виде различных структур данных из
-предыдущих заданий (сравнить ArrayList и LinkedList по производительности – операции вставки,
-удаления, добавления и поиска по образцу)
  */
 public class Main {
     public static void main(String[] args) {
         // ЗАДАНИЕ 1
-        SimpleDateFormat sdf=new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         Date now = new Date();
-        System.out.println("ФИО разработчика:\tЕрмишова СМ");
-        System.out.println("Дата разработки:\t13.11.2022");
-        System.out.println("Текущая дата:\t\t"+sdf.format(now));
+        System.out.println("ФИО разработчика:\tЕвдокимов ДИ");
+        System.out.println("Дата разработки:\t27.11.2022");
+        System.out.println("Текущая дата:\t\t" + sdf.format(now));
         System.out.println();
 
         // ЗАДАНИЕ 2
@@ -47,43 +38,5 @@ public class Main {
         System.out.println(s2);
         System.out.println();
 
-        // ЗАДАНИЕ 4
-        int year, month, date, hour, minuts;
-        year = in.nextInt();
-        month = in.nextInt();
-        date = in.nextInt();
-        hour = in.nextInt();
-        minuts = in.nextInt();
-        Date newDate = new Date();
-        newDate.setYear(year-1900);
-        newDate.setMonth(month-1);
-        newDate.setDate(date);
-        newDate.setHours(hour);
-        newDate.setMinutes(minuts);
-        System.out.println(newDate);
-        Calendar newCalendar = Calendar.getInstance();
-        newCalendar.setTime(newDate);
-        System.out.println(newCalendar.getTime());
-        System.out.println();
-
-        // ЗАДАНИЕ 5
-        ArrayList<Integer> lst1 = new ArrayList<Integer>();
-        LinkedList<Integer> lst2 = new LinkedList<Integer>();
-        long startTime = System.nanoTime();
-        lst1.add(1);
-        lst1.add(2);
-        lst1.add(3);
-        lst1.contains(3);
-        lst1.remove(2);
-        long estimatedTime = System.nanoTime() - startTime;
-        startTime = System.nanoTime();
-        lst2.add(1);
-        lst2.add(2);
-        lst2.add(3);
-        lst2.contains(3);
-        lst2.remove(2);
-        long estimatedTime2 = System.nanoTime() - startTime;
-        System.out.println((double) estimatedTime/1_000_000_000+" s");
-        System.out.println((double) estimatedTime2/1_000_000_000+" s");
     }
 }

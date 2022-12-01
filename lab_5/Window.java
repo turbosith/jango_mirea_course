@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 public class Window extends JFrame {
 
     private int width = 230;
-    private int height = 313;
+    private int height = 163;
 
     private Image img;
 

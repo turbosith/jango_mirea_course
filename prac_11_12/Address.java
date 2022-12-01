@@ -5,7 +5,7 @@ public class Address {
 
     public void recording1(String line){
         int k=0;
-        for(String elem: line.split(",")){
+        for(String elem : line.split(",")){
             adress[k] = elem;
             k++;
         }

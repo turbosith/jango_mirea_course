@@ -13,7 +13,7 @@ public class Window extends JFrame {
 
     public Window() {
         setSize(width, height);
-        setTitle("File Monitor:D");
+        setTitle("Animation");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -23,7 +23,7 @@ public class Window extends JFrame {
 
     public void loadImage(String src) {
         img = new ImageIcon(src).getImage();
-        if(img==null) System.out.println("Нет картинки");
+        if(img==null) System.out.println("Нет изображения");
     }
 
     public void drawIcon() {

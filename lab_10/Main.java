@@ -40,6 +40,6 @@ public class Main {
         arrayStr.showArray();
         System.out.println(arrayStr.getElem(2));
 
-        Filelist("C:\\Users\\user\\Documents\\university\\3 semak\\java");
+
     }
 }

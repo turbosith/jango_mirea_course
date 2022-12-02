@@ -3,7 +3,6 @@ package laby.prac_11_12;
 import java.util.StringTokenizer;
 
 public class Shirt {
-    //"S010,Orange T-Shirt,Orange,S";
     private String number;
     private String name;
     private String color;

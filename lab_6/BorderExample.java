@@ -28,7 +28,6 @@ class BorderExample extends JFrame
         btnWest.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
             }
 
             @Override

@@ -24,8 +24,8 @@ public class Start {
         if(!flag){ System.out.println("Не совпало с шаблоном"); }
 
         s = "name@root.com";
-        //Pattern formatter2 = Pattern.compile("^[a-z0-9]+@(.+)[a-z0-9].?c?o?m?$");
-        Pattern formatter2 = Pattern.compile("^[a-z0-9]+{1,1}@[a-z0-9]+.?c?o?m?$");
+
+        Pattern formatter2 = Pattern.compile("^[a-z0-9]+{1,1}@[a-z0-9]+[.]com$");
         matcher1 = formatter2.matcher(s);
         System.out.print(s + ": " + matcher1.matches());
 

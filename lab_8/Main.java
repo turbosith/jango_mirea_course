@@ -6,7 +6,7 @@ import java.io.IOException;
 //  Реализовать вывод информации из файла на экран
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        try(FileReader reader = new FileReader("src/laby/lab_8/sourse/input.txt")){
+        try(FileReader reader = new FileReader("lab_8/sourse/input.txt")){
             int c;
             while((c=reader.read())!=-1){
                 System.out.print((char)c);

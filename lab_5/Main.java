@@ -12,8 +12,8 @@ public class Main {
             Window wind = new Window();
 
             while(true){
-                for(int i=1; i<5; i++){
-                    wind.loadImage("static/img"+Integer.toString(i)+".png");
+                for(int i=1; i<7; i++){
+                    wind.loadImage("static/img"+ i +".png");
                     wind.drawIcon();
                     try {
                         Thread.sleep(250);

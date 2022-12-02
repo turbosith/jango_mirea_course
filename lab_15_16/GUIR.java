@@ -1,12 +1,15 @@
 package laby.lab_15_16;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
-
 
 public class GUIR extends JFrame {
     String address = "";
@@ -141,32 +144,57 @@ public class GUIR extends JFrame {
             }
         });
     }
+    class BgPanel extends JPanel{
+        public void paintComponent(Graphics g){
+            Image im = null;
+            try {
+                im = ImageIO.read(new File("fon.jpg"));
+            } catch (IOException e) {}
+            g.drawImage(im, 300, 170, null);
+        }
+    }
 
     public GUIR() {
+
         super("Бар Драйв");
+        //setContentPane(new BgPanel());
         setLayout(new FlowLayout());
         this.getContentPane().add(this.centerPanel, BorderLayout.CENTER);
-        setSize(350, 200);
-        add(new JLabel("Выберите вариант предоставления услуг"));
+        setSize(350, 500);
+
+        JLabel label5=new JLabel("Выберите вариант предоставления услуг");
+        label5.setBackground(Color.gray);
+        label5.setOpaque(true);
+        add(label5);
+
         add(buttonOffline);
         add(buttonOnline);
+
+
 
         buttonOffline.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 getContentPane().removeAll();
                 getContentPane().repaint();
-                add(new JLabel("Введите номер столика"));
+                JLabel label5=new JLabel("Введите номер столика");
+                label5.setBackground(Color.white);
+                label5.setOpaque(true);
+                add( label5);
                 validate();
                 chooseTable();
                 chooseDish();
             }
+
         });
 
         buttonOnline.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 getContentPane().removeAll();
                 getContentPane().repaint();
-                add(new JLabel("Введите адрес, по которому будет производиться доставка"));
+                JLabel label5=new JLabel("Введите адрес, по которому будет производиться доставка");
+                label5.setBackground(Color.white);
+                label5.setOpaque(true);
+                add(label5);
                 validate();
                 chooseAddress();
                 chooseInternet();

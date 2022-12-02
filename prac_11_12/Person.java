@@ -8,6 +8,10 @@ public class Person {
         this.name = name;
         this.ot = ot;
     }
+    public Person(String fam, String name) {
+        this.fam = fam;
+        this.name = name;
+    }
 
     public String getFIO() {
         return String.format("%s %s %s", fam, name, ot);
